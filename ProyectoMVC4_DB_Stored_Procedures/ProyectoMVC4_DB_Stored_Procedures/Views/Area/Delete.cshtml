@@ -1,0 +1,32 @@
+﻿@model ProyectoMVC4_DB_Stored_Procedures.Models.area
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Realmente desea eliminar este área?</h3>
+<div>
+    <h4>area</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.are_des)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.are_des)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar a la Lista", "Index")
+        </div>
+    }
+</div>
